@@ -3,10 +3,10 @@
 {
     public interface ISuperHeroService
     {
-        List<SuperHero> ReadAllHeroes();
-        SuperHero? ReadSingleHero(int id);
-        List<SuperHero> CreateHero(SuperHero hero);
-        List<SuperHero>? UpdateHero(int id, SuperHero request);
-        List<SuperHero>? DeleteHero(int id);
+        Task<List<SuperHero>> ReadAllHeroes();
+        Task<SuperHero?> ReadSingleHero(int id);
+        Task<List<SuperHero>> CreateHero(SuperHero hero);
+        Task<List<SuperHero>?> UpdateHero(int id, SuperHero request);
+        Task<List<SuperHero>?> DeleteHero(int id);
     }
 }
